@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #020617;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #22d3ee;
+  color: #020617;
+}
+
+/* Smooth touch feedback */
+
+.touch-button {
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease,
+    background-color 200ms ease;
+}
+
+.touch-button:active {
+  transform: scale(0.95);
+}
+
+/* Smooth cards */
+
+.tournament-card {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.tournament-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  }
